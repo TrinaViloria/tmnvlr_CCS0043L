@@ -1,0 +1,396 @@
+<?php
+
+$name = "Trina Marielle N. Viloria";
+$title = "Aspiring Full-Stack Web Developer";
+$location = "San Jose Del Monte, Bulacan";
+$phone = "0977 076 0450";
+$email = "trinamarielle30@gmail.com";
+$linkedin = "https://www.linkedin.com/in/tmnvlr/";
+
+$summary = "Information Technology student focused on building responsive, user-friendly web applications. I enjoy turning ideas into clean, practical solutions and continuously improving through projects, collaboration, and feedback.";
+
+$coreSkills = [
+    "HTML5, CSS3, JavaScript",
+    "Responsive web design",
+    "Problem-solving and collaboration",
+    "UI prototyping and wireframing"
+];
+
+$projects = [
+    [
+        "name" => "Bakery Management System",
+        "details" => "Developed a web-based system to manage bakery products, customer orders, and daily sales records with searchable data views.",
+        "stack" => "MySQL, HTML, CSS, JavaScript"
+    ],
+    [
+        "name" => "Inventory Management System",
+        "details" => "Built a CRUD web application for tracking stock levels, supplier information, and inventory transactions with low-stock monitoring.",
+        "stack" => "C++"
+    ]
+];
+
+
+$education = [
+    ["level" => "College", "school" => "FEU Institute of Technology", "year" => "2024 - 2028"],
+    ["level" => "Senior High School", "school" => "FEU Diliman", "year" => "2022 - 2024"],
+    ["level" => "Junior High School", "school" => "Holy Infant Montessori Center", "year" => "2018 - 2022"]
+];
+
+$certifications = [
+    "Databases",
+    "Java",
+    "JavaScript",
+    "Python"
+];
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title><?php echo $name; ?> - Resume</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@400;600;700&display=swap');
+
+:root {
+    --bg: #f4f6f9;
+    --card: #ffffff;
+    --text: #1b2330;
+    --muted: #5d687a;
+    --line: #d7deea;
+    --accent: #c32f7a;
+    --accent-soft: #fde7f3;
+    --accent-deep: #9d1f60;
+    --shadow-soft: 0 18px 42px rgba(22, 30, 42, 0.08);
+    --shadow-strong: 0 20px 42px rgba(195, 47, 122, 0.16);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Manrope, "Segoe UI", sans-serif;
+    margin: 0;
+    color: var(--text);
+    background:
+        radial-gradient(circle at 10% 10%, #eef5ff 0%, transparent 38%),
+        radial-gradient(circle at 90% 20%, #ffeaf5 0%, transparent 40%),
+        linear-gradient(135deg, #f8fbff 0%, #fff4fa 100%),
+        var(--bg);
+    padding: 28px 16px;
+    line-height: 1.5;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    filter: blur(12px);
+    z-index: -1;
+}
+
+body::before {
+    background: rgba(195, 47, 122, 0.12);
+    top: -80px;
+    right: -60px;
+}
+
+body::after {
+    background: rgba(80, 122, 255, 0.1);
+    bottom: -90px;
+    left: -70px;
+}
+
+.resume {
+    max-width: 940px;
+    margin: 0 auto;
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    padding: 28px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, #ffffff 100%);
+    box-shadow: var(--shadow-soft);
+    backdrop-filter: blur(3px);
+    animation: fadeUp 0.8s ease both;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 22px;
+    align-items: center;
+    border-bottom: 2px solid var(--line);
+    padding-bottom: 24px;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 16px;
+    border: 3px solid var(--accent-soft);
+    box-shadow: 0 10px 28px rgba(195, 47, 122, 0.2);
+}
+
+.header-info h1 {
+    font-family: "Space Grotesk", "Segoe UI", sans-serif;
+    margin: 0 0 4px 0;
+    font-size: 34px;
+    letter-spacing: -0.5px;
+}
+
+.header-info h2 {
+    margin: 0;
+    color: var(--accent-deep);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.contact {
+    margin-top: 12px;
+    font-size: 14px;
+    color: var(--muted);
+}
+
+.contact p {
+    margin: 4px 0;
+}
+
+.contact a {
+    color: var(--accent-deep);
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 1px dashed rgba(157, 31, 96, 0.35);
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    margin-top: 24px;
+}
+
+section {
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 18px;
+    background: linear-gradient(180deg, #ffffff 0%, #fffafe 100%);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+section::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent) 0%, #ff8fbe 100%);
+    opacity: 0.8;
+}
+
+section:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-strong);
+    border-color: #efc0da;
+}
+
+.section-title {
+    margin: 0 0 12px;
+    font-family: "Space Grotesk", "Segoe UI", sans-serif;
+    color: var(--text);
+    font-size: 17px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+}
+
+.icon {
+    color: var(--accent);
+    margin-right: 8px;
+}
+
+.contact .icon {
+    width: 16px;
+    text-align: center;
+    margin-right: 6px;
+}
+
+ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+.project,
+.role,
+.edu-item {
+    margin-bottom: 14px;
+}
+
+.project:last-child,
+.role:last-child,
+.edu-item:last-child {
+    margin-bottom: 0;
+}
+
+.meta {
+    color: var(--muted);
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+.tag {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 5px 10px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #fde7f3 0%, #ffeef8 100%);
+    color: var(--accent-deep);
+    font-size: 12px;
+    font-weight: 700;
+    border: 1px solid #f8c8e0;
+}
+
+.content-grid section {
+    animation: fadeUp 0.6s ease both;
+}
+
+.content-grid section:nth-child(1) {
+    animation-delay: 0.05s;
+}
+
+.content-grid section:nth-child(2) {
+    animation-delay: 0.12s;
+}
+
+.content-grid section:nth-child(3) {
+    animation-delay: 0.18s;
+}
+
+.content-grid section:nth-child(4) {
+    animation-delay: 0.24s;
+}
+
+.content-grid section:nth-child(5) {
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 780px) {
+    .resume {
+        padding: 20px;
+        border-radius: 14px;
+    }
+
+    header {
+        grid-template-columns: 1fr;
+        text-align: center;
+        justify-items: center;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="resume">
+
+<header>
+    <img src="Image.jpg" class="profile-img" alt="Profile photo">
+    <div class="header-info">
+        <h1><?php echo $name; ?></h1>
+        <h2><?php echo $title; ?></h2>
+        <div class="contact">
+            <p><?php echo $location; ?> | <?php echo $phone; ?></p>
+            <p><?php echo $email; ?> | 
+                <a href="<?php echo $linkedin; ?>" target="_blank">
+                    linkedin.com/TrinaViloria
+                </a>
+            </p>
+        </div>
+    </div>
+</header>
+
+<div class="content-grid">
+    <section>
+        <h3 class="section-title"><i class="fa-solid fa-user icon" aria-hidden="true"></i>Professional Summary</h3>
+        <p><?php echo $summary; ?></p>
+    </section>
+
+    <section>
+        <h3 class="section-title"><i class="fa-solid fa-screwdriver-wrench icon" aria-hidden="true"></i>Core Skills</h3>
+        <ul>
+            <?php foreach ($coreSkills as $skill): ?>
+                <li><?php echo $skill; ?></li>
+            <?php endforeach; ?>
+        </ul>
+    </section>
+
+    <section>
+        <h3 class="section-title"><i class="fa-solid fa-diagram-project icon" aria-hidden="true"></i>Projects</h3>
+        <?php foreach ($projects as $project): ?>
+            <div class="project">
+                <strong><?php echo $project["name"]; ?></strong>
+                <p class="meta"><?php echo $project["details"]; ?></p>
+                <span class="tag"><?php echo $project["stack"]; ?></span>
+            </div>
+        <?php endforeach; ?>
+    </section>
+
+
+    <section>
+        <h3 class="section-title"><i class="fa-solid fa-graduation-cap icon" aria-hidden="true"></i>Education</h3>
+        <?php foreach ($education as $item): ?>
+            <div class="edu-item">
+                <strong><?php echo $item["level"]; ?></strong>
+                <p class="meta"><?php echo $item["school"]; ?> | <?php echo $item["year"]; ?></p>
+            </div>
+        <?php endforeach; ?>
+    </section>
+
+    <section>
+        <h3 class="section-title"><i class="fa-solid fa-certificate icon" aria-hidden="true"></i>Certifications</h3>
+        <ul>
+            <?php foreach ($certifications as $certification): ?>
+                <li><?php echo $certification; ?></li>
+            <?php endforeach; ?>
+        </ul>
+    </section>
+</div>
+
+</div>
+
+</body>
+</html>
