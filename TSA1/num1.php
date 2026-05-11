@@ -97,7 +97,7 @@ $citizenship = 'Filipino';
 
 <div class="section">
 
-    <div class="section-title">School Information</div>
+    <div class="section-title">For School Use:</div>
 
     <div class="row">
         <div class="label">ID Number</div>
@@ -132,7 +132,7 @@ $citizenship = 'Filipino';
 
 <div class="section">
 
-    <div class="section-title">Student Background</div>
+    <div class="section-title">Student's Personal Information</div>
     <div class="row">
         <div class="label">First Name</div>
         <div class="value"><?php echo $firstName; ?></div>
@@ -195,7 +195,7 @@ $citizenship = 'Filipino';
         <div class="label">Country of Birth</div>
         <div class="value"><?php echo $country; ?></div>
     </div>
-    
+
     <div class="row">
         <div class="label">Citizenship</div>
         <div class="value"><?php echo $citizenship; ?></div>
