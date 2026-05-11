@@ -70,23 +70,21 @@
 </style>
 
 <?php
-$student = [
-    'student_number' => 202410441,
-    'date' => '2026-05-11',
-    'grade' => '2nd Year',
-    'expelled' => false,
-    'first_name' => 'Trina Marielle',
-    'last_name' => 'Viloria',
-    'gender' => 'Female',
-    'birth_date' => '2005-11-09',
-    'school' => 'FEU Institute of Technology',
-    'reason' => 'Course-related',
-    'conditions' => 'None',
-    'epi_pen' => false,
-    'country' => 'Philippines',
-    'citizenship' => 'Filipino',
-];
 
+$studentNumber = 202410441;
+$date = '05/11/26';
+$grade = '2nd Year';
+$expelled = false;
+$firstName = 'Trina Marielle';
+$lastName = 'Viloria';
+$gender = 'Female';
+$birthDate = '11/09/05';
+$school = 'FEU Diliman';
+$reason = 'Course-related';
+$conditions = 'None';
+$epiPen = false;
+$country = 'Philippines';
+$citizenship = 'Filipino';
 ?>
 
 </head>
@@ -98,54 +96,111 @@ $student = [
 <div class="title">STUDENT REGISTRATION FORM</div>
 
 <div class="section">
-<div class="section-title">School Use</div>
-<div class="row"><div class="label">Student Number</div><div class="value"><?php echo $student['student_number']; ?></div></div>
-<div class="row"><div class="label">Date</div><div class="value"><?php echo date('F j, Y', strtotime($student['date'])); ?></div></div>
-<div class="row"><div class="label">Grade</div><div class="value"><?php echo $student['grade']; ?></div></div>
+
+    <div class="section-title">School Information</div>
+
+    <div class="row">
+        <div class="label">ID Number</div>
+        <div class="value"><?php echo $studentNumber; ?></div>
+    </div>
+
+    <div class="row">
+        <div class="label">Registration Date</div>
+        <div class="value"><?php echo $date; ?></div>
+    </div>
+
+    <div class="row">
+        <div class="label">Year Level</div>
+        <div class="value"><?php echo $grade; ?></div>
+    </div>
 </div>
 
 <div class="section">
-<div class="section-title">Status</div>
-<div class="row"><div class="label">Expelled</div><div class="value"><?php echo $student['expelled'] ? 'Yes' : 'No'; ?></div></div>
+
+    <div class="section-title">Status</div>
+    <div class="row">
+        <div class="label">Expelled</div>
+        <div class="value"><?php 
+        if ($expelled == true) {
+            echo "Yes";
+        } else {
+            echo "No";
+        }
+        ?></div>
+    </div>
 </div>
 
 <div class="section">
-<div class="section-title">Student Information</div>
-<div class="row"><div class="label">First Name</div><div class="value"><?php echo $student['first_name']; ?></div></div>
-<div class="row"><div class="label">Last Name</div><div class="value"><?php echo $student['last_name']; ?></div></div>
-<div class="row"><div class="label">Gender</div><div class="value"><?php echo $student['gender']; ?></div></div>
-<div class="row"><div class="label">Date of Birth</div><div class="value"><?php echo date('F j, Y', strtotime($student['birth_date'])); ?></div></div>
+
+    <div class="section-title">Student Background</div>
+    <div class="row">
+        <div class="label">First Name</div>
+        <div class="value"><?php echo $firstName; ?></div>
+    </div>
+
+    <div class="row">
+        <div class="label">Last Name</div>
+        <div class="value"><?php echo $lastName; ?></div>
+    </div>
+
+    <div class="row">
+        <div class="label">Gender</div>
+        <div class="value"><?php echo $gender; ?></div>
+    </div>
+
+    <div class="row">
+        <div class="label">Date of Birth</div>
+        <div class="value"><?php echo $birthDate; ?></div>
+    </div>
 </div>
 
 <div class="section">
-<div class="section-title">Previous School</div>
-<div class="row"><div class="label">School</div><div class="value"><?php echo $student['school']; ?></div></div>
-<div class="row"><div class="label">Reason</div><div class="value"><?php echo $student['reason']; ?></div></div>
+
+    <div class="section-title">Educational History</div>
+    <div class="row">
+        <div class="label">Last School Attended</div>
+        <div class="value"><?php echo $school; ?></div>
+    </div>
+
+    <div class="row">
+        <div class="label">Reason for Transfer</div>
+        <div class="value"><?php echo $reason; ?></div>
+    </div>
 </div>
 
 <div class="section">
-<div class="section-title">Health Information</div>
-<div class="row"><div class="label">Medical Conditions</div><div class="value"><?php echo $student['conditions']; ?></div></div>
-<div class="row"><div class="label">Epi-pen</div><div class="value"><?php echo $student['epi_pen'] ? 'Yes' : 'No'; ?></div></div>
+
+    <div class="section-title">Medical Information</div>
+    <div class="row">
+        <div class="label">Medical Conditions</div>
+        <div class="value"><?php echo $conditions; ?></div>
+    </div>
+
+    <div class="row">
+        <div class="label">EpiPen Required</div>
+        <div class="value"><?php 
+        if ($epiPen == true) {
+            echo "Yes";
+        } else {
+            echo "No";
+        }
+        ?></div>
+    </div>
 </div>
 
 <div class="section">
-<div class="section-title">Citizenship</div>
-<div class="row"><div class="label">Birth Country</div><div class="value"><?php echo $student['country']; ?></div></div>
-<div class="row"><div class="label">Citizenship</div><div class="value"><?php echo $student['citizenship']; ?></div></div>
+    
+    <div class="section-title">Citizenship Information</div>
+    <div class="row">
+        <div class="label">Country of Birth</div>
+        <div class="value"><?php echo $country; ?></div>
+    </div>
+    
+    <div class="row">
+        <div class="label">Citizenship</div>
+        <div class="value"><?php echo $citizenship; ?></div>
+    </div>
 </div>
-
-<?php
-$fullName = $student['first_name'] . ' ' . $student['last_name'];
-
-echo "<div class='output'>";
-echo "<div class='output-title'>REGISTERED STUDENT</div>";
-echo "<div class='row'><div class='label'>Name</div><div class='value'>$fullName</div></div>";
-echo "<div class='row'><div class='label'>Student Number</div><div class='value'>" . $student['student_number'] . "</div></div>";
-echo "<div class='row'><div class='label'>Grade</div><div class='value'>" . $student['grade'] . "</div></div>";
-echo "<div class='row'><div class='label'>Country</div><div class='value'>" . $student['country'] . "</div></div>";
-echo "</div>";
-?>
 
 </div>
 
