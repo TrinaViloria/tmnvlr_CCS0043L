@@ -65,10 +65,6 @@ function reverse_name($name)
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="page-header">
-    <h1>String Functions Table</h1>
-    <p>Results for 20 different names using basic string operations.</p>
-</header>
 <main class="page">
     <div class="table-card">
         <table>
