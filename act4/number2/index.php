@@ -7,6 +7,7 @@ $names = [
     'mark benedict castro',
     'andrew de jesus',
     'ivan frondarina',
+    'clark bagtas',
     'tine sarzuelo',
     'ann raye esquivias',
     'fiona rivas',
@@ -18,8 +19,7 @@ $names = [
     'olivia rodrigo',
     'louis partridge',
     'Rachel Mcadams',
-    'IU',
-    'Beebadoobee'
+    'IU'
 ];
 
 
