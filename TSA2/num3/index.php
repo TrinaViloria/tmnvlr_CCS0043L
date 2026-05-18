@@ -15,12 +15,12 @@ if (!empty($_GET['page']) && in_array($_GET['page'], $allowed, true)) {
 </head>
 <body>
 	<div class="container">
-		<?php require_once __DIR__ . '/header.php'; ?>
+		<?php require_once 'header.php'; ?>
 		<div class="layout">
-			<?php require_once __DIR__ . '/menu.php'; ?>
+			<?php require_once 'menu.php'; ?>
 			<div class="content">
 				<?php
-					$file = __DIR__ . '/' . $page . '.php';
+					$file = $page . '.php';
 					if (file_exists($file)) {
 						include $file;
 					} else {

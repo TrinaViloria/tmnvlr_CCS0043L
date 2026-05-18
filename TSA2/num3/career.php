@@ -1,4 +1,4 @@
-<?php if (!isset($profile)) { require_once __DIR__ . '/data.php'; } ?>
+<?php if (!isset($profile)) { require_once 'data.php'; } ?>
 <section>
   <h3>Career Objective</h3>
   <p>I aspire to grow as a full-stack developer by building accessible, user-friendly web applications while continuously learning modern technologies and tools.</p>

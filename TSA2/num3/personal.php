@@ -1,4 +1,4 @@
-<?php if (!isset($profile)) { require_once __DIR__ . '/data.php'; } ?>
+<?php if (!isset($profile)) { require_once 'data.php'; } ?>
 <section>
   <h3>Personal Information</h3>
   <div class="profile">

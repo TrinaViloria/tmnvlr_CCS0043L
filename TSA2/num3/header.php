@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/data.php';
+require_once 'data.php';
 ?>
 <header class="header fade-in">
   <div class="header-left">
